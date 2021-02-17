@@ -1,0 +1,55 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  padding-top: 50px;
+  opacity: 90%;
+  margin-bottom: 15px;
+}
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.screen-header__icons span {
+  margin-left: 25px;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotatez(360deg);
+  }
+}
+.screen-header__icons .fa-cog:hover {
+  animation: rotateCog 1s linear infinite;
+}
+
+@keyframes big {
+  from {
+    transform: none;
+  }
+  to {
+    transform: scale(2);
+  }
+}
+.screen-header .fa-search:hover {
+  animation: big 1s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateZ(50deg);
+  }
+  100% {
+    transform: rotateZ(-50deg);
+  }
+}
+.fa-music:hover {
+  animation: shake 0.2s linear infinite;
+}
